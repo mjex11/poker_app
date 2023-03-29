@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="container">
+      <h1>Poker App</h1>
+      <div class="form">
+        <%= form_with url: submit_poker_index_path, method: :post do |f| %>
+          <%= f.text_field :cards, placeholder: "S1 H1 D12 C11 S2", class: 'text' %>
+          <%= f.submit "Submit", class: 'submit_btm', data: { disable_with: "Submitting..." } %>
+        <% end %>
+      </div>
+      <div id="result"></div>
+    </div>
+  </body>
+</html>
