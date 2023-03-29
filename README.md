@@ -1,7 +1,7 @@
 # mjex11/poker_app
+ポーカーの役を返すwebアプリです。
 
-- Ruby version<br>
-2.7.7
+- Ruby version: 2.7.7
 
 - Configuration
 ```
