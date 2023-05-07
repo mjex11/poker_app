@@ -3,7 +3,7 @@
 
 - Ruby version: 2.7.7
 
-- Configuration
+# Configuration
 ```
 bundle install
 ```
@@ -13,7 +13,14 @@ rails assets:precompile
 ```
 rails s
 ```
-- How to run the test suite
+# with docker
+```
+docker build . -t poker_app
+```
+```
+docker run -p 3000:3000 poker_app
+```
+# test
 ```
 rspec
 ```
