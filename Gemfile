@@ -6,9 +6,10 @@ ruby '3.2.2'
 gem 'rails', '7.0.4.3'
 gem 'puma'
 gem 'sass-rails'
-gem 'webpacker'
 gem 'turbolinks'
 gem 'jbuilder'
+gem 'jsbundling-rails'
+gem 'stimulus-rails'
 # Use Active Model has_secure_password
 # gem 'bcrypt'
 

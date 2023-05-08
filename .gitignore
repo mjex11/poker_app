@@ -26,3 +26,6 @@ yarn-debug.log*
 .yarn-integrity
 
 .terraform/
+
+/app/assets/builds/*
+!/app/assets/builds/.keep

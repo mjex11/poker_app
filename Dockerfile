@@ -7,15 +7,15 @@ ENV NODE_ENV=production
 
 RUN sed -i 's@archive.ubuntu.com@ftp.jaist.ac.jp/pub/Linux@g' /etc/apt/sources.list
 
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-
 RUN apt-get update -qq && apt-get install --no-install-recommends -y \
     build-essential \
-    nodejs \
     tini \
-    yarn \
-    && apt clean \
+    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install --no-install-recommends -y nodejs \
+    && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
+    && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
+    && apt-get update -qq && apt-get install --no-install-recommends -y yarn \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 COPY Gemfile Gemfile.lock /app/
