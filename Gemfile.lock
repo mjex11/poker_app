@@ -117,7 +117,7 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.7)
-    rack-mini-profiler (2.3.4)
+    rack-mini-profiler (3.1.0)
       rack (>= 1.2.0)
     rack-proxy (0.7.6)
       rack
@@ -238,7 +238,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.3)
   puma (~> 5.0)
-  rack-mini-profiler (~> 2.0)
+  rack-mini-profiler (~> 3.1)
   rails (~> 6.1.7, >= 6.1.7.3)
   rspec-rails (~> 5.0)
   rubocop
