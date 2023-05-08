@@ -33,6 +33,9 @@ resource "aws_iam_role" "github_actions" {
 }
 
 locals {
+  region = "ap-northeast-1"
+  aws_account_id = "981715094000"
+
   allowed_github_repositories = [
     "poker_app",
   ]
@@ -81,7 +84,7 @@ resource "aws_iam_policy" "ecr_push" {
           "ecr:PutImage"
         ]
         Effect   = "Allow"
-        Resource = "arn:aws:ecr:region:981715094000:repository/one-ecs-ecr"
+        Resource = "arn:aws:ecr:${local.region}:${local.aws_account_id}:repository/one-ecs-ecr"
       },
       {
         Action = [
