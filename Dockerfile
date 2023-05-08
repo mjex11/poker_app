@@ -1,4 +1,4 @@
-FROM ruby:2.7.7
+FROM ruby:3.2.2
 
 WORKDIR /app
 
@@ -20,7 +20,7 @@ RUN apt-get update -qq && apt-get install --no-install-recommends -y \
 
 COPY Gemfile Gemfile.lock /app/
 
-RUN gem install bundler:2.1.4 \
+RUN gem install bundler:2.4.12 \
     && bundle config set deployment 'true' \
     && bundle config set without 'test development' \
     && bundle install --jobs $(getconf _NPROCESSORS_ONLN) \
