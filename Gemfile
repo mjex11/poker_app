@@ -27,3 +27,7 @@ group :development do
   gem 'listen'
   gem 'spring'
 end
+
+group :test do
+  gem 'simplecov', require: false
+end

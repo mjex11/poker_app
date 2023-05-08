@@ -10,8 +10,8 @@
   "version": "0.1.0",
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
-    "format": "prettier --write app/javascript/application.js",
-    "lint": "eslint --fix app/javascript/application.js",
+    "format": "prettier --write '**/*.js'",
+    "lint": "eslint --fix --ext .js .",
     "fix": "yarn run format && yarn run lint",
     "prepare": "husky install"
   },
@@ -23,9 +23,9 @@
     "prettier": "2.8.8"
   },
   "lint-staged": {
-    "**/*.js": [
-      "prettier --write --ignore-unknown",
-      "eslint --fix"
+    "*.js": [
+      "prettier --write '**/*.js'",
+      "eslint --ignore-pattern 'app/assets/builds/application.js' --fix --ext .js ."
     ]
   }
 }

@@ -1,41 +1,46 @@
 // Entry point for the build script in your package.json
-import "./controllers"
+import './controllers'
 
-import Rails from "@rails/ujs";
-import Turbolinks from "turbolinks";
+import Rails from '@rails/ujs'
+import Turbolinks from 'turbolinks'
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOMContentLoaded");
-  const form = document.querySelector("form");
-  
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    // const cards = event.target.elements.namedItem('cards').value;
-    const submitButton = form.querySelector('[type="submit"]');
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded')
+    const form = document.querySelector('form')
 
-    // ボタンを非活性化
-    submitButton.disabled = true;
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault()
+        // const cards = event.target.elements.namedItem('cards').value;
+        const submitButton = form.querySelector('[type="submit"]')
 
-    const response = await fetch(form.action, {
-      method: form.getAttribute('method'),
-      headers: { "Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json",},
-      body: new URLSearchParams(new FormData(form)),
-    });
+        // ボタンを非活性化
+        submitButton.disabled = true
 
-    const resultDiv = document.querySelector("#result");
-    
-    const data = await response.json();
-    if (response.ok) {
-      resultDiv.textContent = data.hand;
-    } else {
-      const errorList = data.errors.map((error) => `${error}<br>`).join("");
-      resultDiv.innerHTML = `<p>エラー</p>${errorList}`;
-    }
+        const response = await fetch(form.action, {
+            method: form.getAttribute('method'),
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                Accept: 'application/json',
+            },
+            body: new URLSearchParams(new FormData(form)),
+        })
 
-    // // ボタンを活性化
-    submitButton.disabled = false;
-  });
-});
+        const resultDiv = document.querySelector('#result')
 
-Rails.start();
-Turbolinks.start();
+        const data = await response.json()
+        if (response.ok) {
+            resultDiv.textContent = data.hand
+        } else {
+            const errorList = data.errors
+                .map((error) => `${error}<br>`)
+                .join('')
+            resultDiv.innerHTML = `<p>エラー</p>${errorList}`
+        }
+
+        // // ボタンを活性化
+        submitButton.disabled = false
+    })
+})
+
+Rails.start()
+Turbolinks.start()
