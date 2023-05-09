@@ -11,5 +11,9 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    ignorePatterns: ['**/app/assets/builds/application.js'],
+    ignorePatterns: [
+        '**/app/assets/builds/application.js',
+        '**/vendor/**',
+        '**/node_modules/**',
+    ],
 }
