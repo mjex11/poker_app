@@ -26,6 +26,9 @@
     "*.js": [
       "prettier --write '**/*.js'",
       "eslint --ignore-pattern 'app/assets/builds/application.js' --fix --ext .js ."
+    ],
+    "*.{rb,rake}|Gemfile": [
+      "bundle exec rubocop -DES --force-exclusion"
     ]
   }
 }
