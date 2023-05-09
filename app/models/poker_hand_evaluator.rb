@@ -16,7 +16,7 @@ class PokerHandEvaluator
       'ストレート'
     elsif n_of_a_kind?(3)
       'スリーカード'
-    elsif n_of_a_kind?(2) && card_ranks.group_by(&:itself).values.select { |group| group.size == 2 }.size == 2
+    elsif n_of_a_kind?(2) && card_ranks.group_by(&:itself).values.count { |group| group.size == 2 } == 2
       'ツーペア'
     elsif n_of_a_kind?(2)
       'ワンペア'
@@ -32,7 +32,7 @@ class PokerHandEvaluator
   end
 
   def card_suits
-    @cards.map { |card| card[0] }
+    @cards.pluck(0)
   end
 
   def n_of_a_kind?(num)

@@ -1,5 +1,5 @@
 class PokerHand
-  CARD_PATTERN = /\A[SHDC]([1-9]|1[0-3])\z/.freeze
+  CARD_PATTERN = /\A[SHDC]([1-9]|1[0-3])\z/
 
   attr_reader :cards
 
@@ -15,7 +15,7 @@ class PokerHand
     error_messages = []
     error_messages << '5枚のカードを入力してください。' unless correct_card_count?
 
-    invalid_cards = cards.reject { |card| card.match?(CARD_PATTERN) }
+    invalid_cards = cards.grep_v(CARD_PATTERN)
     invalid_cards.each do |invalid_card|
       error_messages << "#{invalid_card}は正しい形式ではありません。"
     end
