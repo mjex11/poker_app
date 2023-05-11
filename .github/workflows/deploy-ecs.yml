@@ -20,7 +20,7 @@ on:
 #         - production
 #         - staging
       image_tag:
-        description: 'choise sekect Docker Image tag'
+        description: 'choise Docker Image tag'
         required: true
         type: string
 
