@@ -28,7 +28,7 @@ env:
   AWS_REGION: ap-northeast-1
   ECS_SERVICE: one-ecs-service
   ECS_CLUSTER: one-ecs-cluster
-  ECS_TASK_DEFINITION: /poker_app/aws/task_definition.yml
+  ECS_TASK_DEFINITION: /poker_app/infra/aws/task_definition.yml
   CONTAINER_NAME: one-ecs
 
 permissions:
