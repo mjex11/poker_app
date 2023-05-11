@@ -71,10 +71,6 @@
     "family": "one-ecs-service",
     "executionRoleArn": "arn:aws:iam::981715094000:role/one-ecs-service-20230511144726556900000003",
     "networkMode": "awsvpc",
-    "compatibilities": [
-        "EC2",
-        "FARGATE"
-    ],
     "requiresCompatibilities": [
         "FARGATE"
     ],
