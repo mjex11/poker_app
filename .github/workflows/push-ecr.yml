@@ -13,8 +13,8 @@ permissions:
   contents: read
 
 jobs:
-  deploy:
-    name: Deploy
+  build_and_bush:
+    name: build and push
     runs-on: ubuntu-latest
     environment: production
 
