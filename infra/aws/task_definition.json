@@ -1,5 +1,4 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:981715094000:task-definition/one-ecs-service",
     "containerDefinitions": [
         {
             "name": "fluent-bit",
@@ -46,9 +45,6 @@
                 }
             ],
             "essential": true,
-            "environment": [],
-            "mountPoints": [],
-            "volumesFrom": [],
             "dependsOn": [
                 {
                     "containerName": "fluent-bit",
@@ -73,7 +69,6 @@
         }
     ],
     "family": "one-ecs-service",
-    "taskRoleArn": "arn:aws:iam::981715094000:role/one-ecs-service-20230511144726561200000004",
     "executionRoleArn": "arn:aws:iam::981715094000:role/one-ecs-service-20230511144726556900000003",
     "networkMode": "awsvpc",
     "compatibilities": [
