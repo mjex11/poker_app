@@ -40,8 +40,8 @@
             "portMappings": [
                 {
                     "name": "one-ecs",
-                    "containerPort": 80,
-                    "hostPort": 80,
+                    "containerPort": 3000,
+                    "hostPort": 3000,
                     "protocol": "tcp"
                 }
             ],
@@ -73,8 +73,8 @@
         }
     ],
     "family": "one-ecs-service",
-    "taskRoleArn": "arn:aws:iam::981715094000:role/one-ecs-service-20230507031250863900000001",
-    "executionRoleArn": "arn:aws:iam::981715094000:role/one-ecs-service-20230507031250865600000002",
+    "taskRoleArn": "arn:aws:iam::981715094000:role/one-ecs-service-20230511144726561200000004",
+    "executionRoleArn": "arn:aws:iam::981715094000:role/one-ecs-service-20230511144726556900000003",
     "networkMode": "awsvpc",
     "compatibilities": [
         "EC2",
