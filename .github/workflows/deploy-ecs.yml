@@ -31,6 +31,10 @@ env:
   ECS_TASK_DEFINITION: /poker_app/aws/task_definition.yml
   CONTAINER_NAME: one-ecs
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   deploy:
     name: deploy
