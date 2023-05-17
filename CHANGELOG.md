@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.4](https://github.com/mjex11/poker_app/compare/v1.0.3...v1.0.4) (2023-05-17)
+
+
+### Miscellaneous
+
+* delele cache of terraform.tfstate ([ab28bfd](https://github.com/mjex11/poker_app/commit/ab28bfd051c1eb35ff7c0e2f4b147a9f14a2540e))
+* set up Docker Buildx ([#21](https://github.com/mjex11/poker_app/issues/21)) ([fb9745f](https://github.com/mjex11/poker_app/commit/fb9745ff0a0c3d3cf076458380a7e11a1bace365))
+* update gitignore for ignore terraform.tfstate ([1c273c1](https://github.com/mjex11/poker_app/commit/1c273c118e0b9da589085d46b6481708d2bdae92))
+
 ## [1.0.3](https://github.com/mjex11/poker_app/compare/v1.0.2...v1.0.3) (2023-05-17)
 
 
