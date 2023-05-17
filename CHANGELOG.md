@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.3](https://github.com/mjex11/poker_app/compare/v1.0.2...v1.0.3) (2023-05-17)
+
+
+### Bug Fixes
+
+* fix ecr login ([4e98c58](https://github.com/mjex11/poker_app/commit/4e98c58c549dc55fbb7147c3c5994352b813eb10))
+
+
+### Miscellaneous
+
+* delete un unnessesary directory and update READ.md ([bec6090](https://github.com/mjex11/poker_app/commit/bec6090dec541a376260af9e0385f143e2885c67))
+* update ci action for ignore change of README.md ([c4ea8c9](https://github.com/mjex11/poker_app/commit/c4ea8c907cc39e48a39e527f3bfb7c27aed6a73c))
+
 ## [1.0.2](https://github.com/mjex11/poker_app/compare/v1.0.1...v1.0.2) (2023-05-17)
 
 
