@@ -1,16 +1,17 @@
-name: Push to Amazon ECR
+name: release-main
 
 on:
   push:
     branches: [ "main" ]
 
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: write
+
 env:
   AWS_REGION: ap-northeast-1
   ECR_REPOSITORY: one-ecs-ecr
-
-permissions:
-  id-token: write
-  contents: read
 
 jobs:
   release-please:
