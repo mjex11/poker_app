@@ -22,10 +22,18 @@ jobs:
       tag_name: ${{ steps.release.outputs.tag_name }}
 
     steps:
+      - name: Generate token
+        id: generate_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
+
       - name: release-please-action
         id: release
         uses: google-github-actions/release-please-action@v3
         with:
+          token: ${{ steps.generate_token.outputs.token }}
           release-type: simple
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
 
