@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/mjex11/poker_app/compare/v1.0.0...v1.0.1) (2023-05-17)
+
+
+### Miscellaneous
+
+* Update release-main.yml ([#15](https://github.com/mjex11/poker_app/issues/15)) ([7619bbf](https://github.com/mjex11/poker_app/commit/7619bbf6c839f9783cb54927214e5986e5edc4cb))
+
 ## 1.0.0 (2023-05-17)
 
 
