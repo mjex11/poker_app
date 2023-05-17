@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.6](https://github.com/mjex11/poker_app/compare/v1.0.5...v1.0.6) (2023-05-17)
+
+
+### Miscellaneous
+
+* revenge ( Update status check if base branch of PR is changed) ([3c7e763](https://github.com/mjex11/poker_app/commit/3c7e763cece4ce457801d6aa94c030b7d8070713))
+* Update status check if base branch of PR is changed ([abd435d](https://github.com/mjex11/poker_app/commit/abd435d19c87cecb736b662e603ff5f346e40d14))
+
 ## [1.0.5](https://github.com/mjex11/poker_app/compare/v1.0.4...v1.0.5) (2023-05-17)
 
 
