@@ -5,8 +5,6 @@ WORKDIR /app
 ENV RAILS_ENV=production
 ENV NODE_ENV=production
 
-RUN sed -i 's@archive.ubuntu.com@ftp.jaist.ac.jp/pub/Linux@g' /etc/apt/sources.list
-
 RUN apt-get update -qq && apt-get install --no-install-recommends -y \
     build-essential \
     tini \
