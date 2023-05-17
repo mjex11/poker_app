@@ -87,7 +87,8 @@ resource "aws_iam_policy" "ecr_push" {
           "ecr:UploadLayerPart",
           "ecr:InitiateLayerUpload",
           "ecr:BatchCheckLayerAvailability",
-          "ecr:PutImage"
+          "ecr:PutImage",
+          "ecr:BatchGetImage"
         ]
         Effect   = "Allow"
         Resource = "arn:aws:ecr:${local.region}:${local.aws_account_id}:repository/${local.ecr_repository_name}"
@@ -105,51 +106,5 @@ resource "aws_iam_policy" "ecr_push" {
 
 resource "aws_iam_role_policy_attachment" "ecr_push" {
   policy_arn = aws_iam_policy.ecr_push.arn
-  role       = aws_iam_role.github_actions.name
-}
-
-resource "aws_iam_policy" "ecs_deploy" {
-  name        = "ECSExcutionRole"
-  description = "Allows to push images to the ECR repository"
-
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Sid = "RegisterTaskDefinition",
-        Effect = "Allow",
-        Action = [
-          "ecs:RegisterTaskDefinition"
-        ],
-        "Resource" = "*"
-      },
-      {
-        Sid = "PassRolesInTaskDefinition",
-        Effect = "Allow",
-        Action = [
-          "iam:PassRole"
-        ],
-        Resource = [
-          "arn:aws:iam::${local.aws_account_id}:role/${local.task_definition_task_role_name}",
-          "arn:aws:iam::${local.aws_account_id}:role/${local.task_definition_task_execution_role_name}"
-        ]
-      },
-      {
-        Sid = "DeployService",
-        Effect = "Allow",
-        Action = [
-          "ecs:UpdateService",
-          "ecs:DescribeServices"
-        ],
-        "Resource":[
-          "arn:aws:ecs:${local.region}:${local.aws_account_id}:service/${local.ecs_cluster_name}/${local.ecs_service_name}"
-        ]
-      }
-    ]
-  })
-}
-
-resource "aws_iam_role_policy_attachment" "ecs_deploy" {
-  policy_arn = aws_iam_policy.ecs_deploy.arn
   role       = aws_iam_role.github_actions.name
 }
