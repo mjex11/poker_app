@@ -3,6 +3,7 @@ A poker web app.
 - Ruby version: 3.2.2
 - Rails version: 7.0.4.3
 # Deployment Flow
+Deploy ECS with GitOps
 ```mermaid
 graph TB
   A["poker_app Repo"] -- "Merge to Main" --> B["release-please Action"]
