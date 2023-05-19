@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/mjex11/poker_app/compare/v1.0.6...v1.0.7) (2023-05-19)
+
+
+### Miscellaneous
+
+* Update README.md ([b2eef02](https://github.com/mjex11/poker_app/commit/b2eef020ee1a301ff6c87616817d5e232bae6462))
+
 ## [1.0.6](https://github.com/mjex11/poker_app/compare/v1.0.5...v1.0.6) (2023-05-17)
 
 
