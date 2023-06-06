@@ -189,10 +189,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@rails/ujs@^7.0.4-3":
-  version "7.0.4-3"
-  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-7.0.4-3.tgz#a90a31189db702ac7a9e95b18c09503025fb4951"
-  integrity sha512-JttmF98C1xTVcCSWSDwbqF0IPrCKD6lpeB9uy4VjGYniZIidgSq0fSX1vmHxCH7CuSmsIFMNJ6LtLyCAb8Y6Ng==
+"@rails/ujs@^7.0.4":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-7.0.5.tgz#d35a71fe6ecd4ab88bbe4bc6c2f287c992c2de4c"
+  integrity sha512-/wQ6v4DGxhxflPWoLwGkOQoKbtIXx/LsVNKd8shRM+/HXxlVBEb+F5znN99TlxX8e/R3dN6anTPAqA+mfA5YtQ==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
