@@ -4,7 +4,7 @@
   "dependencies": {
     "@hotwired/stimulus": "^3.2.1",
     "@rails/ujs": "^7.0.4-3",
-    "esbuild": "^0.17.18",
+    "esbuild": "^0.18.1",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
