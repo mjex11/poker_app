@@ -3,12 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.2'
 
-gem 'rails', '7.0.4.3'
+gem 'rails', '7.0.5.1'
 gem 'puma'
 gem 'sass-rails'
 gem 'turbolinks'
 gem 'jbuilder'
-gem 'jsbundling-rails'
+gem 'jsbundling-rails', '>= 1.1.2'
 gem 'stimulus-rails'
 # Use Active Model has_secure_password
 # gem 'bcrypt'
@@ -17,7 +17,7 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 6.0.3'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
