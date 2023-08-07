@@ -9,7 +9,7 @@ gem 'sass-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'jsbundling-rails'
-gem 'stimulus-rails'
+gem 'stimulus-rails', '>= 1.2.2'
 # Use Active Model has_secure_password
 # gem 'bcrypt'
 
