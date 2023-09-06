@@ -24,7 +24,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console'
+  gem 'web-console', '>= 4.2.1'
   gem 'rack-mini-profiler'
   gem 'listen'
   gem 'spring'
