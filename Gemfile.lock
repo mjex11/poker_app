@@ -114,7 +114,7 @@ GEM
       timeout
     net-smtp (0.3.3)
       net-protocol
-    nio4r (2.5.9)
+    nio4r (2.7.0)
     nokogiri (1.14.3-aarch64-linux)
       racc (~> 1.4)
     nokogiri (1.14.3-arm64-darwin)
@@ -124,7 +124,7 @@ GEM
     parallel (1.23.0)
     parser (3.2.2.1)
       ast (~> 2.4.1)
-    puma (6.2.2)
+    puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.7)
@@ -258,7 +258,7 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   listen
-  puma
+  puma (>= 6.4.2)
   rack-mini-profiler
   rails (= 7.0.4.3)
   rspec-rails
@@ -276,4 +276,4 @@ RUBY VERSION
    ruby 3.2.2p53
 
 BUNDLED WITH
-   2.4.12
+   2.4.6
