@@ -1,5 +1,5 @@
 # ビルドステージ
-FROM ruby:3.2.2 AS builder
+FROM ruby:3 AS builder
 
 WORKDIR /app
 
@@ -28,7 +28,7 @@ RUN bundle exec rails assets:precompile \
     && yarn cache clean
 
 # 本番ステージ
-FROM ruby:3.2.2
+FROM ruby:3
 
 ENV RAILS_ENV=production
 ENV NODE_ENV=production
