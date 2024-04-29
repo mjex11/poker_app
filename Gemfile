@@ -7,7 +7,7 @@ gem 'rails', '7.0.4.3'
 gem 'puma'
 gem 'sass-rails'
 gem 'turbolinks'
-gem 'jbuilder'
+gem 'jbuilder', '>= 2.12.0'
 gem 'jsbundling-rails'
 gem 'stimulus-rails'
 # Use Active Model has_secure_password
